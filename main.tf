@@ -36,4 +36,5 @@ resource "aws_db_instance" "default" {
   password             = "Password.12345"
   parameter_group_name = "default.mysql5.7"
   skip_final_snapshot  = true
+  db_subnet_group_name = aws_db_subnet_group.default.name
 }
