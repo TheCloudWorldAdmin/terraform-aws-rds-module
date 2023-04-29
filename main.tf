@@ -19,7 +19,7 @@ provider "aws" {
 
 resource "aws_db_subnet_group" "default" {
   name       = "main"
-  subnet_ids = ["subnet-016ca944bbb0cbe28", "subnet-069e156c09bb8b982""]
+  subnet_ids = ["subnet-016ca944bbb0cbe28", "subnet-069e156c09bb8b982"]
 
   tags = {
     Name = "My DB subnet group"
