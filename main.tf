@@ -1,22 +1,3 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.0"
-    }
-  }
-  backend "s3" {
-    bucket = "thecloudworld-terraform"
-    key    = "tfstate/terraform.tfstate"
-    region = "us-east-1"
-  }
-}
-
-# Configure the AWS Provider
-provider "aws" {
-  region = "us-east-1"
-}
-
 resource "aws_db_subnet_group" "default" {
   name       = "main"
   subnet_ids = ["subnet-016ca944bbb0cbe28", "subnet-069e156c09bb8b982"]
